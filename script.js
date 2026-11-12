@@ -1,0 +1,11 @@
+const menu=document.querySelector('.menu');
+menu.addEventListener('click',()=>{const open=menu.getAttribute('aria-expanded')!=='true';menu.setAttribute('aria-expanded',String(open));menu.setAttribute('aria-label',open?'關閉選單':'開啟選單');menu.textContent=open?'×':'☰';document.querySelector('.nav').classList.toggle('open',open);});
+document.querySelectorAll('nav a').forEach(a=>a.addEventListener('click',()=>{menu.setAttribute('aria-expanded','false');menu.textContent='☰';document.querySelector('.nav').classList.remove('open');}));
+document.querySelectorAll('.features details').forEach(item=>item.addEventListener('toggle',()=>{if(item.open)document.querySelectorAll('.features details').forEach(other=>{if(other!==item)other.open=false;});}));
+const config=window.EXHIBITION||{};
+for(const key of ['date','location'])if(config[key]){const el=document.querySelector(`[data-event="${key}"]`);el.textContent=config[key];el.classList.remove('pending');}
+if(config.date&&config.location){document.querySelector('.status').innerHTML='<span></span> 歡迎現場認識 Z300';}
+if(config.lineUrl){try{const url=new URL(config.lineUrl);if(url.protocol==='https:'&&['line.me','lin.ee'].includes(url.hostname)){const a=document.querySelector('#line-link');a.href=url.href;a.target='_blank';a.rel='noopener noreferrer';a.removeAttribute('aria-disabled');a.innerHTML='加入 LINE 好友 <span>↗</span>';document.querySelector('#line-note').textContent='點擊前往官方 LINE';}}catch{}}
+document.querySelector('#year').textContent=new Date().getFullYear();
+document.querySelector('#share').addEventListener('click',async()=>{const status=document.querySelector('#share-status');try{if(navigator.share){await navigator.share({title:document.title,url:location.href});status.textContent='';}else if(navigator.clipboard){await navigator.clipboard.writeText(location.href);status.textContent='已複製頁面連結，可分享或儲存。';}else{status.textContent='請複製瀏覽器網址，或使用瀏覽器的加入書籤功能。';}}catch(e){if(e.name!=='AbortError')status.textContent='請使用瀏覽器的分享或加入書籤功能。';}});
+if(!matchMedia('(prefers-reduced-motion: reduce)').matches){const observer=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');observer.unobserve(e.target);}});},{threshold:.6});document.querySelectorAll('.statement h2 span').forEach(el=>observer.observe(el));}
