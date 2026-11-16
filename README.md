@@ -10,3 +10,7 @@
 網站：https://shanghaipopocat-rgb.github.io/ZEROSPAN/
 
 GitHub Actions 自動發布至 GitHub Pages。
+
+## 圖片修正
+
+2026-11-16：產品照片白邊隱去，照片周圍背景統一為純黑；上善若水區塊改用提供的 5272.jpg 水紋底圖。官方 LINE：https://lin.ee/Tf1573K。
