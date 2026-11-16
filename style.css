@@ -11,7 +11,7 @@
 
 /* 純黑背景與原始照片邊緣修正；不裁切產品主體。 */
 .hero,.hero-image,.six-designs>img,.brand-story,.brand-photo,.brand-photo img{background-color:#000000}
-.hero-image,.six-designs>img,.brand-photo img{clip-path:inset(2px 0 0 0);filter:contrast(1.04)}
+.hero-image,.six-designs>img,.brand-photo img{clip-path:none;filter:none}
 
 /* 補充2：唱頭與左右 VTA 圖片。 */
 .feature-gallery{width:128px;display:grid;gap:12px;flex-shrink:0}.feature-gallery img{width:100%;height:auto;object-fit:contain}.feature-gallery-pair{width:240px;grid-template-columns:1fr 1fr;gap:8px}
