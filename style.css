@@ -30,3 +30,7 @@
   .line-panel small{overflow-wrap:anywhere}
 }
 
+/* 唱頭固定套的兩張圖統一為正方形。 */
+.feature-gallery:not(.feature-gallery-pair) img{width:100%;height:auto;aspect-ratio:1 / 1;object-fit:cover}
+.line-panel .dealer-lead{font-size:16px;font-weight:600;color:var(--ink);margin:16px 0 12px}.line-panel .dealer-lead+p{line-height:1.9;margin-top:0}
+
