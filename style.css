@@ -72,3 +72,8 @@
 .magazine-copy li>span{display:block}
 .magazine-intro,.magazine-copy li{text-wrap:wrap;word-break:normal;overflow-wrap:normal}
 @media(max-width:700px){.magazine-copy ul{padding-left:0;list-style:none}.magazine-copy li+li{margin-top:24px}.magazine-copy h3{text-wrap:wrap}}
+
+/* Show only the English wordmark in the contact block and align visible artwork with text. */
+.contact-wordmark{position:relative;overflow:hidden;width:280px;max-width:100%;aspect-ratio:514/112;margin:0 0 32px}
+.contact-wordmark img{position:absolute;max-width:none;width:112.840467%;height:auto;left:-4.280156%;top:-17.857143%}
+@media(max-width:700px){.contact-wordmark{width:240px}}
