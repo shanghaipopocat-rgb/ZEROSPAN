@@ -17,3 +17,16 @@
 .feature-gallery{width:128px;display:grid;gap:12px;flex-shrink:0}.feature-gallery img{width:100%;height:auto;object-fit:contain}.feature-gallery-pair{width:240px;grid-template-columns:1fr 1fr;gap:8px}
 @media(max-width:1050px){.feature-gallery{width:128px}.feature-gallery-pair{width:200px}}
 @media(max-width:700px){.feature-gallery,.feature-gallery-pair{width:100%;max-width:440px;grid-template-columns:1fr 1fr}.feature-gallery img{width:100%;height:auto;aspect-ratio:1;object-fit:contain}}
+
+/* 手機文字依可用欄寬自然換行。 */
+@media(max-width:700px){
+  .section{padding-left:16px;padding-right:16px}
+  .photo-caption,.six-designs,.brand-copy{padding-left:16px;padding-right:16px}
+  .feature{padding:16px}
+  main p,main h2,main h3,main li,main dd,main address,footer p{text-wrap:wrap;word-break:normal;overflow-wrap:break-word;line-break:auto}
+  .poem,.technical-intro,.feature>div:not(.feature-gallery),.brand-copy,.event-copy,.contact>div{width:100%;min-width:0;max-width:none}
+  .poem p,.technical-intro p,.feature p,.installation p,.installation li,.brand-copy>p:not(.kicker),.photo-caption{text-align:left;white-space:normal}
+  .brand-copy h2 br,.event-copy h2 br,.product-tagline .mobile-break{display:none}
+  .line-panel small{overflow-wrap:anywhere}
+}
+
