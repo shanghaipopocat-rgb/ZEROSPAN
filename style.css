@@ -49,3 +49,7 @@
  .button{font-size:18px;line-height:28px}
  .hero-note>span{font-size:18px}.hero-note a{font-size:12px}.hero-note a span{font-size:16px}
 }
+
+/* 強化經銷合作洽談標題。 */
+.line-panel h3{font-size:36px;line-height:1.35;font-weight:600;color:var(--red);margin-bottom:24px}
+@media(max-width:700px){.line-panel h3{font-size:30px;line-height:1.4}}
