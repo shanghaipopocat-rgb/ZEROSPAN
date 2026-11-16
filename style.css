@@ -65,3 +65,10 @@
 .magazine-file{font-size:14px;line-height:20px;margin:16px 0 0;color:#555}
 .magazine-download{display:inline-flex;max-width:100%;text-align:center;justify-content:center}
 @media(max-width:700px){.magazine-card{grid-template-columns:minmax(0,1fr);padding:24px 16px;gap:24px;margin-top:40px}.magazine-cover{max-width:220px;margin:auto}.magazine-copy h3{font-size:24px;line-height:32px}.magazine-intro,.magazine-copy li{font-size:18px;line-height:28px}.magazine-download{width:100%;font-size:16px;line-height:24px}}
+
+/* Keep names and technical terms intact; separate summary labels from body copy. */
+.magazine-copy .keep-word{white-space:nowrap}
+.magazine-copy li>strong{display:block;margin-bottom:8px}
+.magazine-copy li>span{display:block}
+.magazine-intro,.magazine-copy li{text-wrap:wrap;word-break:normal;overflow-wrap:normal}
+@media(max-width:700px){.magazine-copy ul{padding-left:0;list-style:none}.magazine-copy li+li{margin-top:24px}.magazine-copy h3{text-wrap:wrap}}
