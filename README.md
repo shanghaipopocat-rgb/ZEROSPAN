@@ -22,3 +22,7 @@ GitHub Actions 自動發布至 GitHub Pages。
 ## 產品原圖替換
 
 三處產品大圖改用使用者提供的「音響網頁排版-02.jpg」原始檔，移除舊照片的 CSS 邊緣裁切與對比調整。
+
+## LINE 手機連結
+
+LINE 加好友使用官方 https://line.me/R/ti/p/%40251noxss 並在同一視窗開啟，顯示帳號 ID 供手機瀏覽器無法跳轉時使用。
