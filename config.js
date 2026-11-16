@@ -1,1 +1,2 @@
-window.EXHIBITION = { lineUrl: 'https://lin.ee/Tf1573K' };
+window.EXHIBITION = { lineUrl: 'https://line.me/R/ti/p/%40251noxss' };
+

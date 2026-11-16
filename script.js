@@ -4,7 +4,7 @@ menu.addEventListener('click',()=>{const open=menu.getAttribute('aria-expanded')
 document.querySelectorAll('nav a').forEach(a=>a.addEventListener('click',closeMenu));
 document.addEventListener('keydown',e=>{if(e.key==='Escape')closeMenu();});
 const config=window.EXHIBITION||{};
-if(config.lineUrl){try{const url=new URL(config.lineUrl);if(url.protocol==='https:'&&['line.me','lin.ee'].includes(url.hostname)){const a=document.querySelector('#line-link');a.href=url.href;a.target='_blank';a.rel='noopener noreferrer';a.removeAttribute('aria-disabled');a.textContent='加入 LINE 好友 ↗';document.querySelector('#line-note').textContent='點擊前往官方 LINE';}}catch{}}
+if(config.lineUrl){try{const url=new URL(config.lineUrl);if(url.protocol==='https:'&&['line.me','lin.ee'].includes(url.hostname)){const a=document.querySelector('#line-link');a.href=url.href;a.removeAttribute('target');a.rel='noopener noreferrer';a.removeAttribute('aria-disabled');a.textContent='加入 LINE 好友 ↗';document.querySelector('#line-note').innerHTML='手機點擊開啟 LINE。若仍顯示 QR Code，請改用 Safari 或 Chrome 開啟本頁。<br>LINE ID：@251noxss';}}catch{}}
 document.querySelector('#year').textContent=new Date().getFullYear();
 document.querySelector('#share').addEventListener('click',async()=>{const status=document.querySelector('#share-status');const url=location.href.split('#')[0];try{if(navigator.share){await navigator.share({title:document.title,text:'2026 台北圓山音響展，11/19–11/22，209 房 ZEROSPAN。',url});status.textContent='';}else if(navigator.clipboard){await navigator.clipboard.writeText(url);status.textContent='已複製網站連結。';}else{status.textContent='請使用瀏覽器的分享或加入書籤功能。';}}catch(e){if(e.name!=='AbortError')status.textContent='請使用瀏覽器的分享或加入書籤功能。';}});
 const dialog=document.querySelector('.image-dialog');let opener;
@@ -12,3 +12,4 @@ document.querySelectorAll('[data-zoom]').forEach(button=>button.addEventListener
 document.querySelector('.dialog-close').addEventListener('click',()=>dialog.close());
 dialog.addEventListener('click',e=>{if(e.target===dialog){const r=dialog.getBoundingClientRect();if(e.clientX<r.left||e.clientX>r.right||e.clientY<r.top||e.clientY>r.bottom)dialog.close();}});
 dialog.addEventListener('close',()=>{document.body.style.overflow='';opener?.focus();});
+
